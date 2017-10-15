@@ -65,7 +65,7 @@ A user study through Amazon Mechanical Turk was performed to analyze the charact
 ## Download
 Please note that by downloading this dataset you are consenting to non-commercial use and the license.
 
-### [ Download the full [Dataset] and [Testset] ](https://console.cloud.google.com/storage/browser/streetview_image_pose_3d)  
+### [ Download the full [Dataset] and [Testset] ](https://goo.gl/ERPCsa)  
 
 The dataset is large (800GB). In order to make it more handy, it comes as multiple tar files that contain the image - and meta - data. The test set and 3D models are provided as separate folders.
 
