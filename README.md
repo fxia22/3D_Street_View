@@ -195,6 +195,9 @@ Aligned version of <bounding box coordinates 4x2 double>.
 
 ---
 
+Slightly uncleaned version of our learning code: [link](https://github.com/pulkitag/egomotion)
+
+---
 
 ### Citations
 If you use this dataset please cite:
