@@ -6,7 +6,6 @@ This repository shares a large dataset of street view images **(25 million image
 <img src="https://github.com/amir32002/3D_Street_View/blob/master/misc/data_samplel.gif" width="600">
 
 
-
 The dataset was collected automatically without human annotation by developing a system to intergrate georeferenced 3D models of cities with google street view images and their geo-metadata. For more information on how the dataset was collected, please see the [[paper]](http://3drepresentation.stanford.edu/). 
 
 <img src="https://github.com/amir32002/3D_Street_View/blob/master/misc/integrated_crawler.gif" width="600">
