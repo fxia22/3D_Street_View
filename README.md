@@ -16,7 +16,7 @@ The dataset covers the downtown and surrounding areas of New York, Chicago, Wash
 
 <img src="https://github.com/amir32002/3D_Street_View/blob/master/3D_cities_snapshots/3D_models_tile.jpg" width="850">
 
-The following show the coverage areas for 6 of the 8 cities.
+The following shows the coverage areas for 6 of the 8 cities.
 
 <img src="https://github.com/amir32002/3D_Street_View/blob/master/misc/dataset_coverage.jpg" width="850">
  
@@ -41,11 +41,11 @@ For more detail on the data collection and the method please visit the [[project
 The dataset comprises 25 million google street view images forming 118 million corresponding pairs. We collected images on a dense grid in the aforementioned cities. Based on the 3D model of the city, we densely sampled points on facades and performed ray tracing to find all street view panoramas that see the same target point without occlusion. For each image, we know the geo location of the street view camera as well as the location of the focused target point. Since google street view provides 360 panoramas, we compute heading and pitch angles such that we can capture a 640x640 image section (of the panorama) that shows the respective target point in its center. Two images form a pair if they show the same physical target point. Each target point is typically observed by 2-7 corresponding street view images. An image is given by a 640x640 jpg along with an identically named text file that contains meta data such as the geo locations of camera and target point, the distance to the target or the pose of the camera. The image’s filename encodes unique ids for the street view location and for the target point. This allows to easily identify corresponding images. The images are compressed into multiple zip-files such that the resulting file size doesn’t exceed a maximum.
 
 ### Test Set:
-To ensure the quality of the test set and keep evaluations unimpacted by the potential errors introduced by the automated data collection, every datapoint in the test set are verified by at least three Amazon Mechanical Turkers and noisy instances are removed. The procedure and statistics are elborated in the supplementary material. 
+To ensure the quality of the test set and keep evaluations unimpacted by the potential errors introduced by the automated data collection, every datapoint in the test set was verified by at least three Amazon Mechanical Turkers and noisy instances were removed. The procedure and statistics are elborated in the supplementary material. 
 The test pairs are guaranteed to: 
 * show the same exact physical point in both patches (re-verified by Turkers)
-* the magnitude of the translation vector between the center of two patches (re-measured by Turker click locations) to be <25 pixels (i.e. ~4% of image’s width) 
-* the uncertainty in translation vector between the center of two patches (measured by the disparity among Turker click locations) to be <15  pixels (~2% of image’s width)
+* the center of two patches are supposed to show the same physical point; the magnitude of (pixel) translation vector between the pixel location of this physical point in the two patches (re-measured by Turker click locations) is guaranteed to be <25 pixels (i.e. ~4% of image’s width). In other words, if there is a misalignment between the two patches, it's guaranteed to be <~4% of image's width, which is negligible. 
+* the uncertainty in the end point location of this translation vector (quantified by the disparity among Turker click locations) is <15  pixels (~2% of image’s width). This is useful for the cases where there is uncertainty in the correspondence location, e.g. when the point is on a plain wall. 
 
 You can download visualizations and accuracy analysis of several thousand randomly picked test datapoints [[here]](https://storage.googleapis.com/amirs/3Drep_dataset/testset_pairs_visualization_v1.zip). Below you can see a few sample test pairs where the center of two images/patches should match and three Turkers verified that by their clicks. See details in [[supplementary material]](http://cs.stanford.edu/~amirz/index_files/0633_supp.pdf).
 
